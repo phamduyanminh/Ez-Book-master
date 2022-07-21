@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../blocs/bloc/book_bloc.dart';
+import 'book_preview_test.dart';
 
 class BooksHomeTest extends StatefulWidget {
   const BooksHomeTest({Key? key}) : super(key: key);
@@ -41,7 +42,7 @@ class _BooksHomeTestState extends State<BooksHomeTest> {
                             onTap: () => Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    BookInformation(context, state, index),
+                                    BookPreviewTest(context, state, index),
                               ),
                             ),
                             child: SizedBox(
