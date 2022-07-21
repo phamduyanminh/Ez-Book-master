@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 import '../../blocs/bloc/book_bloc.dart';
+import '../../components/build_elevated_button.dart';
+import 'book_information.dart';
 
-class BookPreviewTest extends StatelessWidget {
+class BookPreview extends StatelessWidget {
   final BuildContext context;
   final BookLoaded state;
   final int index;
 
-  const BookPreviewTest(
+  const BookPreview(
     this.context,
     this.state,
     this.index,
@@ -161,6 +163,51 @@ class BookPreviewTest extends StatelessWidget {
                             fontWeight: FontWeight.normal,
                             fontSize: 15,
                           ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 55,
+                    ),
+                    //**Having bug for displaying types of the book*/
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.center,
+                    //   children: (state.bookModel.results as dynamic)[index]
+                    //       .type
+                    //       .map((e) => Padding(
+                    //             padding:
+                    //                 const EdgeInsets.symmetric(horizontal: 5),
+                    //             child: Chip(
+                    //               label: Text(e),
+                    //               backgroundColor:
+                    //                   Theme.of(context).colorScheme.secondary,
+                    //             ),
+                    //           )),
+                    // ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        BuildElevatedButton(
+                          Icons.add,
+                          "Add To Library",
+                          Colors.grey.shade800,
+                          () {
+                            print("Add to Library");
+                          },
+                        ),
+                        const SizedBox(width: 15),
+                        BuildElevatedButton(
+                          Icons.menu_book,
+                          "Read Now",
+                          const Color(0xFF6741FF),
+                          () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    BookInformation(context, state, index),
+                              ),
+                            );
+                          },
                         ),
                       ],
                     ),

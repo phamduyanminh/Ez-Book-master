@@ -1,18 +1,17 @@
-import 'package:ez_book/src/pages/books/book_information.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../blocs/bloc/book_bloc.dart';
-import 'book_preview_test.dart';
+import 'book_preview.dart';
 
-class BooksHomeTest extends StatefulWidget {
-  const BooksHomeTest({Key? key}) : super(key: key);
+class BooksHome extends StatefulWidget {
+  const BooksHome({Key? key}) : super(key: key);
 
   @override
-  State<BooksHomeTest> createState() => _BooksHomeTestState();
+  State<BooksHome> createState() => _BooksHomeState();
 }
 
-class _BooksHomeTestState extends State<BooksHomeTest> {
+class _BooksHomeState extends State<BooksHome> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -42,7 +41,7 @@ class _BooksHomeTestState extends State<BooksHomeTest> {
                             onTap: () => Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    BookPreviewTest(context, state, index),
+                                    BookPreview(context, state, index),
                               ),
                             ),
                             child: SizedBox(

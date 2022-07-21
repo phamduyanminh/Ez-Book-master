@@ -1,5 +1,4 @@
-import 'package:ez_book/src/pages/books/home_books.dart';
-import 'package:ez_book/src/pages/test/books_home_test.dart';
+import 'package:ez_book/src/pages/books/books_home.dart';
 import 'package:flutter/material.dart';
 import 'package:ez_book/src/pages/home/widget/custom_app_bar.dart';
 import 'package:ez_book/src/pages/home/widget/movie_header.dart';
@@ -32,7 +31,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             Home(settingsController: widget.settingsController),
             //Navigate to difference screens - bottom navigation
-            const Center(child: BooksHomeTest()),
+            const Center(child: BooksHome()),
             const Center(child: Text("Column")),
             const Center(child: Text("Person")),
           ]),
