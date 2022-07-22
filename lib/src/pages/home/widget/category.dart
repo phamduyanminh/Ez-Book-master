@@ -1,10 +1,11 @@
-import 'package:ez_book/src/blocs/bloc/book_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:ez_book/src/models/books.dart';
 import 'package:ez_book/src/pages/detail/detail.dart';
 import 'package:ez_book/src/pages/home/widget/category_title.dart';
 import 'package:ez_book/src/settings/settings_controller.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../blocs/homebloc/book_bloc.dart';
 
 class Category extends StatelessWidget {
   Category({Key? key, required this.settingsController}) : super(key: key);

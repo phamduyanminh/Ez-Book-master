@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../blocs/bloc/book_bloc.dart';
+import '../../blocs/homebloc/book_bloc.dart';
 import 'book_preview.dart';
 
 class BooksHome extends StatefulWidget {

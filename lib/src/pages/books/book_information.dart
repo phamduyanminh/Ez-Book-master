@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../blocs/bloc/book_bloc.dart';
+import '../../blocs/homebloc/book_bloc.dart';
 
 class BookInformation extends StatelessWidget {
   final BuildContext context;

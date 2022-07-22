@@ -1,12 +1,13 @@
 import 'dart:ui';
 
-import 'package:ez_book/src/blocs/bloc/book_bloc.dart';
+import 'package:ez_book/src/blocs/fontsizebloc/bloc/font_size_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:ez_book/src/pages/home/home.dart';
 import 'package:ez_book/src/theme/theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'blocs/homebloc/book_bloc.dart';
 import 'settings/settings_controller.dart';
 
 /// The Widget that configures your application.
@@ -74,8 +75,15 @@ class MyApp extends StatelessWidget {
                 switch (routeSettings.name) {
                   default:
                     //Initialize [BlocProvider] for Home
-                    return BlocProvider(
-                      create: (context) => BookBloc(),
+                    return MultiBlocProvider(
+                      providers: [
+                        BlocProvider<BookBloc>(
+                          create: (context) => BookBloc(),
+                        ),
+                        BlocProvider<FontSizeBloc>(
+                          create: (context) => FontSizeBloc(),
+                        ),
+                      ],
                       child: HomePage(
                         settingsController: settingsController,
                       ),

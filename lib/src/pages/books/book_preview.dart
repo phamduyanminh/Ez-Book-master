@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../blocs/bloc/book_bloc.dart';
+import '../../blocs/homebloc/book_bloc.dart';
 import '../../components/build_elevated_button.dart';
 import 'book_information.dart';
 

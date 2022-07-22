@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../blocs/bloc/book_bloc.dart';
+import '../../blocs/fontsizebloc/bloc/font_size_bloc.dart';
+import '../../blocs/homebloc/book_bloc.dart';
 
 class SettingHome extends StatefulWidget {
   const SettingHome({Key? key}) : super(key: key);
@@ -12,12 +13,12 @@ class SettingHome extends StatefulWidget {
 
 class _SettingHomeState extends State<SettingHome> {
   double currentSliderValue = 15;
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => BookBloc()..add(GetBookList()),
-      child: BlocBuilder<BookBloc, BookState>(
+      create: (context) =>
+          FontSizeBloc()..add(FontSizeChanged(currentSliderValue)),
+      child: BlocBuilder<FontSizeBloc, double>(
         builder: (context, state) {
           if (state is BookLoaded) {
             return Scaffold(
