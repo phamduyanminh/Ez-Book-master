@@ -1,4 +1,5 @@
 import 'package:ez_book/src/pages/books/books_home.dart';
+import 'package:ez_book/src/pages/setting/setting_home.dart';
 import 'package:flutter/material.dart';
 import 'package:ez_book/src/pages/home/widget/custom_app_bar.dart';
 import 'package:ez_book/src/pages/home/widget/movie_header.dart';
@@ -33,7 +34,8 @@ class _HomePageState extends State<HomePage> {
             //Navigate to difference screens - bottom navigation
             const Center(child: BooksHome()),
             const Center(child: Text("Column")),
-            const Center(child: Text("Person")),
+            const Center(child: SettingHome()),
+            const Center(child: Text("Language")),
           ]),
       bottomNavigationBar: _buildBottonBar(),
     );
@@ -54,13 +56,25 @@ class _HomePageState extends State<HomePage> {
         selectedItemColor: const Color(0xFF6741FF),
         items: const [
           BottomNavigationBarItem(
-              label: 'Home', icon: Icon(Icons.home_rounded)),
+            label: 'Home',
+            icon: Icon(Icons.home_rounded),
+          ),
           BottomNavigationBarItem(
-              label: 'Book', icon: Icon(Icons.menu_book_rounded)),
+            label: 'Books',
+            icon: Icon(Icons.menu_book_rounded),
+          ),
           BottomNavigationBarItem(
-              label: 'Column', icon: Icon(Icons.view_week_outlined)),
+            label: 'Column',
+            icon: Icon(Icons.view_week_outlined),
+          ),
           BottomNavigationBarItem(
-              label: 'Person', icon: Icon(Icons.person_outline)),
+            label: 'User',
+            icon: Icon(Icons.person_outline),
+          ),
+          BottomNavigationBarItem(
+            label: 'Language',
+            icon: Icon(Icons.language),
+          ),
         ]);
   }
 }
