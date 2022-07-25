@@ -1,4 +1,5 @@
 import 'package:ez_book/src/pages/books/books_home.dart';
+import 'package:ez_book/src/pages/languages/language_setting.dart';
 import 'package:ez_book/src/pages/setting/setting_home.dart';
 import 'package:flutter/material.dart';
 import 'package:ez_book/src/pages/home/widget/custom_app_bar.dart';
@@ -35,7 +36,7 @@ class _HomePageState extends State<HomePage> {
             const Center(child: BooksHome()),
             const Center(child: Text("Column")),
             const Center(child: SettingHome()),
-            const Center(child: Text("Language")),
+            const Center(child: LanguageSetting()),
           ]),
       bottomNavigationBar: _buildBottonBar(),
     );

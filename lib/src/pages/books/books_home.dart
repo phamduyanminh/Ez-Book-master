@@ -45,7 +45,7 @@ class _BooksHomeState extends State<BooksHome> {
                               ),
                             ),
                             child: SizedBox(
-                              height: 120,
+                              height: 135,
                               child: Row(
                                 children: <Widget>[
                                   Expanded(
