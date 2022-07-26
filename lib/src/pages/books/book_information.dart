@@ -13,7 +13,7 @@ class BookInformation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => FontSizeBloc()..add(FontSizeChanged(15)),
+      create: (context) => FontSizeBloc(),
       child: BlocBuilder<FontSizeBloc, double>(
         builder: (context, fontState) {
           return Scaffold(
