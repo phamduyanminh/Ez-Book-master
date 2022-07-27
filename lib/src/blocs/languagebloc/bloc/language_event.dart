@@ -9,7 +9,7 @@ abstract class LanguageEvent extends Equatable {
 
 class LanguageChanged extends LanguageEvent {
   final int value;
-  const LanguageChanged(this.value);
+  const LanguageChanged({required this.value});
   @override
   List<int> get props => [value];
 }

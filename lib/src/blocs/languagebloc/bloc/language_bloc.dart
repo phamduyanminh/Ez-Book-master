@@ -5,9 +5,8 @@ part 'language_event.dart';
 part 'language_state.dart';
 
 class LanguageBloc extends Bloc<LanguageEvent, int> {
-  LanguageBloc() : super(2) {
+  LanguageBloc() : super(1) {
     on<LanguageChanged>((event, emit) {
-      // TODO: implement event handler
       emit(event.value);
     });
   }

@@ -19,13 +19,13 @@ class _LanguageSettingState extends State<LanguageSetting> {
         builder: (context, state) {
           return Scaffold(
             appBar: AppBar(
-              title: Text("Language Setting"),
+              title: const Text("Language Setting"),
             ),
             body: Container(
               padding: const EdgeInsets.all(20),
               child: DropdownButton(
                 value: state,
-                items: [
+                items: const [
                   DropdownMenuItem(
                     child: Text("English"),
                     value: 1,
@@ -36,7 +36,9 @@ class _LanguageSettingState extends State<LanguageSetting> {
                   ),
                 ],
                 onChanged: (int? value) {
-                  context.read<LanguageBloc>().add(LanguageChanged(value!));
+                  context
+                      .read<LanguageBloc>()
+                      .add(LanguageChanged(value: value!));
                 },
               ),
             ),

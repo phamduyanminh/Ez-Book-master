@@ -5,15 +5,15 @@ import '../../models/book.dart';
 
 class ApiProvider {
   // http://192.168.10.14:1337/parse/classes/Books
-  final String _url = "http://192.168.10.29:1337/parse/classes/Books";
+  final String _url = "http://192.168.10.14:1337/parse/classes/Books";
   final _urlHeader = {
-    // 'X-Parse-Application-Id': 'myAppId',
-    // 'X-Parse-REST-API-Key': '61894b21be75260c4964065b1eecec4d',
-    // 'Content-Type': 'application/json',
-    'appid': 'myAppId'
+    'X-Parse-Application-Id': 'myAppId',
+    'X-Parse-REST-API-Key': '61894b21be75260c4964065b1eecec4d',
+    'Content-Type': 'application/json',
+    // 'appid': 'myAppId'
   };
 
-  Future<Book> fetchApi() async {
+  Future<Book> fetchBookApi() async {
     final response = await http.get(Uri.parse(_url), headers: _urlHeader);
     if (response.statusCode == 200) {
       // print(response.body);
@@ -27,3 +27,5 @@ class ApiProvider {
     }
   }
 }
+
+//http://192.168.10.29:1337/parse/classes/Books
