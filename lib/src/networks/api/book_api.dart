@@ -17,7 +17,7 @@ class ApiProvider {
     final response = await http.get(Uri.parse(_url), headers: _urlHeader);
     if (response.statusCode == 200) {
       // print(response.body);
-      var data = json.decode(response.body);
+      // var data = json.decode(response.body);
       // print(data);
       return Book.fromJson(jsonDecode(response.body));
     } else if (response.statusCode == 403) {
