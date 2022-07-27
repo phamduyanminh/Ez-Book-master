@@ -2,6 +2,10 @@
     "appTitle": "Ứng dụng Sách EZ",
     "@appTitle": {
       "description": "Dễ dàng đọc các quyển sách yêu thích của bạn"
-    }
+    },
+    "title": "Tựa đề",
+    "author": "Tác giả",
+    "readNow": "Đọc sách",
+    "addToLibrary": "Thêm vào thư viện sách"
 }
   
