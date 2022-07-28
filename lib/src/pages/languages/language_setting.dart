@@ -31,7 +31,7 @@ class _LanguageSettingState extends State<LanguageSetting> {
                     value: 1,
                   ),
                   DropdownMenuItem(
-                    child: Text("Vietnam"),
+                    child: Text("Vietnamese"),
                     value: 2,
                   ),
                 ],

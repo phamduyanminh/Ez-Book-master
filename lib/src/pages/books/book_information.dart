@@ -24,50 +24,47 @@ class BookInformation extends StatelessWidget {
             ),
             body: Container(
               padding: const EdgeInsets.only(
-                top: 15,
-                left: 15,
-                right: 15,
+                top: 30,
+                left: 20,
+                right: 20,
               ),
-              child: Align(
-                alignment: Alignment.center,
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          const Icon(Icons.remove_red_eye),
-                          const SizedBox(width: 10),
-                          Text((state.bookModel.results as dynamic)[position]
-                              .view
-                              .toString()),
-                          const SizedBox(width: 230),
-                          const Icon(Icons.reviews),
-                          const SizedBox(width: 10),
-                          Text(
-                            (state.bookModel.results as dynamic)[position]
-                                .review
-                                .toString(),
-                            overflow: TextOverflow.fade,
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 20),
-                      // Image.network('${state.bookModel.imageUrl}'),
-                      Text(
-                        'Description: ${(state.bookModel.results as dynamic)[position].desc.toString()}',
-                        style: TextStyle(
-                          fontSize: fontState,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        const Icon(Icons.remove_red_eye),
+                        const SizedBox(width: 10),
+                        Text((state.bookModel.results as dynamic)[position]
+                            .view
+                            .toString()),
+                        const SizedBox(width: 230),
+                        const Icon(Icons.reviews),
+                        const SizedBox(width: 10),
+                        Text(
+                          (state.bookModel.results as dynamic)[position]
+                              .review
+                              .toString(),
+                          overflow: TextOverflow.fade,
                         ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    // Image.network('${state.bookModel.imageUrl}'),
+                    Text(
+                      'Description: ${(state.bookModel.results as dynamic)[position].desc.toString()}',
+                      style: TextStyle(
+                        fontSize: fontState,
                       ),
-                      const SizedBox(height: 20),
-                      Text(
-                        'Content: ${(state.bookModel.results as dynamic)[position].content.toString()}',
-                        style: TextStyle(
-                          fontSize: fontState,
-                        ),
+                    ),
+                    const SizedBox(height: 20),
+                    Text(
+                      'Content: ${(state.bookModel.results as dynamic)[position].content.toString()}',
+                      style: TextStyle(
+                        fontSize: fontState,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ),

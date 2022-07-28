@@ -6,5 +6,12 @@
   "title": "Title",
   "author": "Author",
   "readNow": "Read Now",
-  "addToLibrary": "Add To Library"
+  "addToLibrary": "Add To Library",
+  "english": "English",
+  "vietnamese": "Vietnamese",
+  "setting": "Setting",
+  "profile": "Profile",
+  "name": "Name",
+  "phone": "Phone",
+  "password": "Password"
 }

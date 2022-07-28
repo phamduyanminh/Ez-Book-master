@@ -17,7 +17,7 @@ class _ProfileSettingState extends State<ProfileSetting> {
       ),
       body: Container(
         padding: const EdgeInsets.all(20.0),
-        color: Colors.white,
+        // color: Colors.white,
         child: Container(
           child: Center(
             child: Column(

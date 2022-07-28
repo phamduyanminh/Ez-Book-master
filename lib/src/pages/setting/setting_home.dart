@@ -45,6 +45,7 @@ class _SettingHomeState extends State<SettingHome> {
                           ),
                           SizedBox(width: 10),
                           Text(
+                            //! AppLocalizations.of(context).profile
                             "Profile",
                             style: TextStyle(
                               fontSize: 20,

@@ -4,7 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
 import '../../models/book.dart';
-import '../../networks/repositories/api_repository.dart';
+import '../../networks/repositories/book_repository.dart';
 
 part 'book_event.dart';
 part 'book_state.dart';

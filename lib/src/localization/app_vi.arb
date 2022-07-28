@@ -3,9 +3,16 @@
     "@appTitle": {
       "description": "Dễ dàng đọc các quyển sách yêu thích của bạn"
     },
-    "title": "Tựa đề",
+    "title": "Tiêu đề",
     "author": "Tác giả",
     "readNow": "Đọc sách",
-    "addToLibrary": "Thêm vào thư viện sách"
+    "addToLibrary": "Thêm vào thư viện sách",
+    "english": "Tiếng Anh",
+    "vietnamese": "Tiéng Việt",
+    "setting": "Chỉnh sửa",
+    "profile": "Thông tin cá nhân",
+    "name": "Tên",
+    "phone": "Số điện thoại",
+    "password": "Mật khẩu"
 }
   

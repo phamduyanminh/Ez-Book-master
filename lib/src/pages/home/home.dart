@@ -8,6 +8,8 @@ import 'package:ez_book/src/pages/home/widget/category.dart';
 import 'package:ez_book/src/pages/home/widget/trending_movies.dart';
 import 'package:ez_book/src/settings/settings_controller.dart';
 
+import '../auth/sign_in.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key, required this.settingsController})
       : super(key: key);
@@ -34,7 +36,7 @@ class _HomePageState extends State<HomePage> {
             Home(settingsController: widget.settingsController),
             //Navigate to difference screens - bottom navigation
             const Center(child: BooksHome()),
-            const Center(child: Text("Column")),
+            const Center(child: SignIn()),
             const Center(child: SettingHome()),
             const Center(child: LanguageSetting()),
           ]),
