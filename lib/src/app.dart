@@ -8,6 +8,7 @@ import 'package:ez_book/src/pages/home/home.dart';
 import 'package:ez_book/src/theme/theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'blocs/homebloc/book_bloc.dart';
+import 'blocs/loginbloc/bloc/login_bloc.dart';
 import 'settings/settings_controller.dart';
 
 /// The Widget that configures your application.

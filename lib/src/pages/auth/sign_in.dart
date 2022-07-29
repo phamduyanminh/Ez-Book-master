@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../blocs/loginbloc/bloc/login_bloc.dart';
 import '../../components/build_elevated_button.dart';
 
 class SignIn extends StatefulWidget {
@@ -12,57 +14,41 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(
-        vertical: 20,
-        horizontal: 25,
-      ),
-      child: Form(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            SizedBox(height: 70),
-            Text(
-              "Sign In",
-              style: TextStyle(fontSize: 25),
-            ),
-            SizedBox(height: 30),
-            Container(
-              width: 400,
-              child: TextFormField(
-                decoration: InputDecoration(
-                  labelText: "Enter username",
-                  fillColor: Colors.grey,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15.0),
-                    borderSide: const BorderSide(),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: 20),
-            Container(
-              width: 400,
-              child: TextFormField(
-                decoration: InputDecoration(
-                  labelText: "Enter password",
-                  fillColor: Colors.grey,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15.0),
-                    borderSide: const BorderSide(),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 30),
-            BuildElevatedButton(
-              Icons.arrow_forward,
-              "Submit",
-              Colors.black,
-              () {},
-            ),
-          ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Sign-In"),
+        backgroundColor: Colors.black,
+        leading: BackButton(
+          color: Colors.white,
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
+      ),
+      body: Column(
+        children: [
+          usernameField(),
+          passwordField(),
+        ],
+      ),
+    );
+  }
+
+  Widget usernameField() {
+    return TextFormField(
+      decoration: const InputDecoration(
+        icon: Icon(Icons.person),
+        hintText: 'Username',
+      ),
+    );
+  }
+
+  Widget passwordField() {
+    return TextFormField(
+      obscureText: true, //* Has non showing text function
+      decoration: const InputDecoration(
+        icon: Icon(Icons.password),
+        hintText: 'Password',
       ),
     );
   }
